@@ -1,2 +1,0 @@
-
-divisable = map (mod == 0) [1..20]
