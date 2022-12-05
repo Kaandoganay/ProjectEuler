@@ -1,5 +1,15 @@
-primes :: [Integer]
-primes = 2 : 3 : [5,7..]
 
-solution3 :: Integer -> [Integer]
-solution3 n = [x | x <- primes, mod n x == 0]
+primes :: [Integer]
+primes = 2 : filter (null . tail . primeFactors) [3,5..]
+
+primeFactors :: Integer -> [Integer]
+primeFactors n = factor n primes
+  where
+    factor n (p:ps) 
+        | p*p > n        = [n]
+        | n `mod` p == 0 = p : factor (n `div` p) (p:ps)
+        | otherwise      =     factor n ps
+
+problem_3 :: Integer
+problem_3 = last (primeFactors 600851475143)
+    
