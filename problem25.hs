@@ -11,8 +11,8 @@ firstInteger :: Integer
 firstInteger = read $ head [x | x <- makeInteger, length x == 1000]
 
 indexInteger :: String
-indexInteger = show $ length $ takeWhile (<= firstInteger) fibs
+indexInteger = show . length $ takeWhile (<= firstInteger) fibs
 
 main :: IO ()
 main = do
-    putStr indexInteger
+    putStrLn indexInteger
