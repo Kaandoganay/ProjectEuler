@@ -1,5 +1,3 @@
-{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
-
 primes :: [Integer]
 primes = 2 : filter (null . tail . primeFactors) [3,5..]
 
