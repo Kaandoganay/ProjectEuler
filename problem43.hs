@@ -31,16 +31,22 @@ number7 xs= read [d 8 xs, d 9 xs, d 10 xs] :: Int
 true1 :: [Char] -> Bool
 true1 xs = even (number1 xs)
 
+true2 :: [Char] -> Bool
 true2 xs= number2 xs `mod` 3 == 0
 
+true3 :: [Char] -> Bool
 true3 xs= number3 xs `mod` 5 == 0
 
+true4 :: [Char] -> Bool
 true4 xs = number4 xs `mod` 7 == 0
 
+true5 :: [Char] -> Bool
 true5 xs = number5 xs `mod` 11 == 0
 
+true6 :: [Char] -> Bool
 true6 xs = number6 xs `mod` 13 == 0
 
+true7 :: [Char] -> Bool
 true7 xs = number7 xs `mod` 17 == 0
 
 pandigital :: [String]
