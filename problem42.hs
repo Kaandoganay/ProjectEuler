@@ -22,4 +22,4 @@ main :: IO ()
 main= do
   name <- readFile "0042_words.txt"
   let names = read ("["++ name++"]")
-  print (length (set names))
+  print $ length $ set names
