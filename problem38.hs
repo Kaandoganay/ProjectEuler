@@ -1,5 +1,4 @@
 import Data.List
-import Data.Char(intToDigit)
 
 pandigital :: [String]
 pandigital = permutations "123456789"
