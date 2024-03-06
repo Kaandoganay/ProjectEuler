@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -Wno-simplifiable-class-constraints #-}
 import Data.List
 
 pandigital :: [String]
