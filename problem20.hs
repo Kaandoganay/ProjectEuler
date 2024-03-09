@@ -11,3 +11,7 @@ digitSum xs = (charToInt (head xs) - 48) : digitSum (tail xs)
 factorialDigitSum :: (Show a, Num a, Enum a) => a -> Int
 factorialDigitSum n = sum $ digitSum (factorial n)
 
+main :: IO ()
+main = do
+    print $ factorialDigitSum 10
+
