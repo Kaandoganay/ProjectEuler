@@ -12,4 +12,4 @@ factorialDigitSum n = sum $ digitSum (factorial n)
 
 main :: IO ()
 main = do
-    print $ factorialDigitSum 10
+    print $ factorialDigitSum 100
